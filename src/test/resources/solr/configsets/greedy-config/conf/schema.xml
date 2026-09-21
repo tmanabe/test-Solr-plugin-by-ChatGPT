@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema name="greedy-test" version="1.6">
+
+    <fieldType name="string"
+               class="solr.StrField"
+               sortMissingLast="true"/>
+
+    <fieldType name="long"
+               class="solr.LongPointField"
+               docValues="true"/>
+
+    <field name="id"
+           type="string"
+           indexed="true"
+           stored="true"
+           required="true"/>
+
+    <field name="category"
+           type="string"
+           indexed="true"
+           stored="true"
+           multiValued="false"/>
+
+    <field name="_version_"
+           type="long"
+           indexed="false"
+           stored="false"/>
+
+    <uniqueKey>id</uniqueKey>
+
+</schema>
